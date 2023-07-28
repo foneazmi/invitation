@@ -1,28 +1,17 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Landing } from "./screen";
-import { useFonts } from "expo-font";
-import { Text } from "react-native";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/lib/integration/react";
+import { store, persistor } from "./stores";
+import { RouteApp } from "./routes";
+import "./App.css";
 
-const Stack = createNativeStackNavigator();
-export const App = () => {
-  const [fontsLoaded] = useFonts({
-    "Pacifico-Regular": require("../assets/fonts/Pacifico-Regular.ttf"),
-  });
-
-  if (!fontsLoaded) {
-    return <Text>Please Wait</Text>;
-  }
-
+function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="landing" component={Landing} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate persistor={persistor} loading={null}>
+        <RouteApp />
+      </PersistGate>
+    </Provider>
   );
-};
+}
+
+export default App;
