@@ -4,7 +4,7 @@ import { store, persistor } from "./stores";
 import { RouteApp } from "./routes";
 import "./App.css";
 
-function App() {
+export const App = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
@@ -12,6 +12,4 @@ function App() {
       </PersistGate>
     </Provider>
   );
-}
-
-export default App;
+};
