@@ -3,14 +3,13 @@
   "private": true,
   "version": "0.0.1",
   "author": "Farkhan Azmi",
-  "homepage": "http://foneazmi.github.io/invitation",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "NODE_ENV=production vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "predeploy": "yarn build --base=/invitation"
+    "predeploy": "yarn build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
