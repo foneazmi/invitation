@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "18.x"
       - run: yarn
-      - run: yarn build --base=/invitation
+      - run: yarn build
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v3
