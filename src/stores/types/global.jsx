@@ -1,4 +1,4 @@
-export const MESSAGE = "MESSAGE";
-export const CONFIRMATION = "CONFIRMATION";
-export const GALLERIES = "GALLERIES";
+export const BEGIN = "BEGIN";
+export const END = "END";
 export const THEME = "THEME";
+export const LOGOUT = "LOGOUT";

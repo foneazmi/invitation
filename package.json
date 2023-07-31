@@ -1,8 +1,9 @@
 {
-  "name": "invitation",
+  "name": "foneazmi.github.io",
   "private": true,
   "version": "0.0.1",
   "author": "Farkhan Azmi",
+  "homepage": "http://foneazmi.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,13 +15,12 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "daisyui": "^3.5.0",
-    "firebase": "^10.1.0",
     "lottie-react": "^2.4.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "react-redux": "^8.1.2",
+    "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.2",
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",

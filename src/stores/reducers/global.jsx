@@ -1,22 +1,20 @@
-import { MESSAGE, CONFIRMATION, GALLERIES, THEME } from "../types";
+import { BEGIN, END, LOGOUT, THEME } from "../types";
 
 const INITIAL_STATE = {
-  message: [],
-  confirmation: [],
+  loading: false,
   theme: "cupcake",
-  galleries: [],
 };
 
 export const global = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case MESSAGE:
-      return { ...state, message: action.payload };
-    case CONFIRMATION:
-      return { ...state, confirmation: action.payload };
-    case GALLERIES:
-      return { ...state, galleries: action.payload };
+    case BEGIN:
+      return { ...state, loading: true };
+    case END:
+      return { ...state, loading: false };
     case THEME:
       return { ...state, theme: action.payload };
+    case LOGOUT:
+      return INITIAL_STATE;
     default:
       return state;
   }
