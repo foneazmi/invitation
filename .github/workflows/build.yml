@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: "18.x"
       - run: yarn
-      - run: ls -la
+      - run: ls -la src
       - run: yarn build
       - name: Deploy to GitHub Pages
         if: success()
