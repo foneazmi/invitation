@@ -1,12 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { UploadPhotoScreen, InvitationScreen } from "./ui/screen";
-import { BASE_PATH } from "./helpers";
 
 export const SIDE_MENU = [
   {
-    path: `upload`,
+    path: `/invitation/upload`,
     element: <UploadPhotoScreen />,
+  },
+  {
+    path: `/invitation`,
+    element: <InvitationScreen />,
   },
   {
     path: `/`,
