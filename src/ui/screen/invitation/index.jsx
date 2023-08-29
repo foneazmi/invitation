@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-import { useDispatch } from "react-redux";
-
 import {
   FooterSection,
   GallerySection,
@@ -11,7 +8,7 @@ import {
   QuranSection,
 } from "./components/common-component";
 import AudioPlayer from "./components/audio-player";
-import { startGetMessage } from "../../../stores/actions/global";
+import { useFirebase } from "../../../stores";
 
 const Envelope = React.lazy(() => import("./components/envelope"));
 
@@ -47,13 +44,14 @@ const ClickedLanding = () => (
 
 export const InvitationScreen = () => {
   const [clicked, setClicked] = useState(false);
-  const dispatch = useDispatch();
+  const { subscribe } = useFirebase();
+  // const dispatch = useDispatch();
   return clicked ? (
     <ClickedLanding />
   ) : (
     <Landing
       onClick={() => {
-        dispatch(startGetMessage());
+        subscribe();
         setClicked(true);
       }}
     />

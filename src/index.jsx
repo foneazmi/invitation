@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-const App = React.lazy(() => import("./app-root.jsx"));
+const App = React.lazy(() => import("./app.jsx"));
 import { FaRegPaperPlane } from "react-icons/fa";
 
 const Spinner = (

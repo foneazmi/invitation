@@ -1,17 +1,19 @@
 import React from "react";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { InvitationScreen } from "./ui/screen/invitation";
-import { Layout } from "./ui/components";
+import { Routes, Route } from "react-router-dom";
+import { UploadPhotoScreen, InvitationScreen } from "./ui/screen";
 
 export const SIDE_MENU = [
   {
     path: "/invitation",
     element: <InvitationScreen />,
   },
+  {
+    path: "/photo/upload",
+    element: <UploadPhotoScreen />,
+  },
 ];
 
-const RouterApp = () => {
+export const RouterApp = () => {
   return (
     <Routes>
       {SIDE_MENU.map((route) => (
@@ -22,16 +24,5 @@ const RouterApp = () => {
         />
       ))}
     </Routes>
-  );
-};
-
-export const RouteApp = () => {
-  const { theme } = useSelector(({ global }) => global);
-  return (
-    <div data-theme={theme}>
-      <Router>
-        <Layout content={<RouterApp />} />
-      </Router>
-    </div>
   );
 };

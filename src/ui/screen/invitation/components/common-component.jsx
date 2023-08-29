@@ -9,8 +9,8 @@ import {
   gallery5,
   gallery6,
 } from "../../../../assets/image";
-import { useSelector } from "react-redux";
 import moment from "moment";
+import { useFirebase } from "../../../../stores";
 
 function useElementOnScreen(ref, rootMargin = "0px") {
   const [isIntersecting, setIsIntersecting] = useState(true);
@@ -239,7 +239,7 @@ export const GroomBrideSection = () => (
 );
 
 export const Message = () => {
-  const { message, confirmation } = useSelector(({ global }) => global);
+  const { message, confirmation } = useFirebase();
   const listMessage = useMemo(
     () =>
       message.map((e) => ({
