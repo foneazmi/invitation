@@ -4,12 +4,8 @@ import { UploadPhotoScreen, InvitationScreen } from "./ui/screen";
 
 export const SIDE_MENU = [
   {
-    path: `/invitation/upload`,
+    path: `/upload`,
     element: <UploadPhotoScreen />,
-  },
-  {
-    path: `/invitation`,
-    element: <InvitationScreen />,
   },
   {
     path: `/`,
