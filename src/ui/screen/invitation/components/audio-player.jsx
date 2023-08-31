@@ -21,7 +21,7 @@ export default () => {
   return (
     <div className="hidden" onTouchStart={handlePlay}>
       <button onClick={handlePlay}>play</button>
-      <audio ref={audioRef1} id="1" controls loop src="/invitation/music.mp3" />
+      <audio ref={audioRef1} id="1" controls loop src="/music.mp3" />
     </div>
   );
 };
