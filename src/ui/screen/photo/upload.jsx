@@ -99,15 +99,15 @@ export const UploadPhotoScreen = () => {
       </div>
       <div className="bg-base-200 p-4 mt-4 rounded-lg overflow-auto h-full">
         <h1>Report</h1>
-        {status.map((stat) => (
-          <h1
-            className={`text-primary-content p-2 mt-2 rounded-md ${
-              stat.ok ? "bg-primary" : "bg-error"
-            }`}
-          >
-            {stat.message}
-          </h1>
-        ))}
+        {status.map((stat) =>
+          stat.ok ? (
+            <></>
+          ) : (
+            <h1 className="text-primary-content p-2 mt-2 rounded-md bg-error">
+              {stat.message}
+            </h1>
+          )
+        )}
       </div>
     </div>
   );
