@@ -92,6 +92,26 @@ export const UploadPhotoScreen = () => {
               checked={type === "other"}
             />
           </label>
+          <label className="label cursor-pointer" onClick={() => setType("1")}>
+            <span className="label-text">Prewed</span>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-green-500"
+              onChange={() => setType("1")}
+              checked={type === "1"}
+            />
+          </label>
+          <label className="label cursor-pointer" onClick={() => setType("2")}>
+            <span className="label-text">Prewed-Edit</span>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-green-500"
+              onChange={() => setType("2")}
+              checked={type === "2"}
+            />
+          </label>
         </div>
         <button className="btn btn-primary w-full" onClick={onClick}>
           Upload Now
